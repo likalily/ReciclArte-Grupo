@@ -10,9 +10,13 @@ export default function House({ cover }) {
        style={styles.cover}
        />
      </View>
-
-    <View style={styles.content}>
-      <Text style={styles.description}>
+     <View style={styles.title}>
+      <Text style={styles.title}> 
+        Tudo sobre nós!
+      </Text>
+    </View> 
+    <View style={styles.title}>
+      <Text style={styles.title}> 
         Tudo sobre nós!
       </Text>
     </View> 

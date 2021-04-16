@@ -6,7 +6,9 @@ import {TouchableOpacity} from 'react-native';
 
 import Login from './pages/Login'; 
 import Home from './pages/Home'; 
-import Detail from './pages/Detail'; 
+import DetailEmpresa1 from './pages/DetailEmpresa1'; 
+import DetailEmpresa2 from './pages/DetailEmpresa2'; 
+import DetailEmpresa3 from './pages/DetailEmpresa3'; 
 
 const Stack = createStackNavigator();
 
@@ -45,10 +47,10 @@ function Routes(){
         }}
         />
         <Stack.Screen 
-        name="detail" 
-        component={Detail} 
+        name="detailempresa1" 
+        component={DetailEmpresa1} 
         options={{
-          title: 'Detalhe',
+          title: 'Info',
           headerTitleStyle:{
             fontFamily: 'Montserrat_700Bold'
           },
@@ -63,7 +65,46 @@ function Routes(){
             </TouchableOpacity>
           )
         }}
+        />
+        <Stack.Screen 
+        name="detailempresa2" 
+        component={DetailEmpresa2} 
+        options={{
+          title: 'Info',
+          headerTitleStyle:{
+            fontFamily: 'Montserrat_700Bold'
+          },
 
+          headerRight: () => (
+            <TouchableOpacity style={{ marginRight: 15 }}>
+              <Feather
+              name="shopping-bag"
+              size={24}
+              color="black"
+              />
+            </TouchableOpacity>
+          )
+        }}
+        />
+        <Stack.Screen 
+        name="detailempresa3" 
+        component={DetailEmpresa3} 
+        options={{
+          title: 'Info',
+          headerTitleStyle:{
+            fontFamily: 'Montserrat_700Bold'
+          },
+
+          headerRight: () => (
+            <TouchableOpacity style={{ marginRight: 15 }}>
+              <Feather
+              name="shopping-bag"
+              size={24}
+              color="black"
+              />
+            </TouchableOpacity>
+          )
+        }}
         />
       </Stack.Navigator>
     </NavigationContainer>

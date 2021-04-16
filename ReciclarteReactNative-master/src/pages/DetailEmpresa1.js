@@ -6,16 +6,16 @@ import Stars from 'react-native-stars';
 
 import SwiperComponent from '../components/Swiper';
 
-export default function Detail() {
+export default function DetailEmpresa1() {
  return (
-   <View style={styles.container}>
+     <ScrollView style={styles.container}>
      <View style={styles.swiperContent}>
         <SwiperComponent/>
      </View>
 
     <View style={styles.headerContent}>
       <View style={{ width: '65%' }}>
-        <Text style={styles.house}>Casa de Praia</Text>
+        <Text style={styles.house}>Reciclagem Verde</Text>
       </View>
 
       <View style={{ width: '35%' }}>
@@ -34,37 +34,72 @@ export default function Detail() {
       </View>
     </View>
 
-    <Text style={styles.price}>
-      R$ 1.200,20
+    <Text style={styles.describ}>
+      Ferraz de Vasconcelos
     </Text>
     <Text style={styles.description}>
-     Casa nova uma quadra do mar, lugar seguro e monitorado 24horas.
+     Empresa a 35 anos no mercado e há 20 em Ferraz de Vasconcelos.
     </Text>
+
+      <View style={{ width: '65%' }}>
+        <Text style={styles.adress}><Feather name="map" size={20} color="black" /> Endereço</Text>
+      </View>
+      <Text style={styles.description}>
+     Rua: Rio das Folhas Verdes, Bairro: Nilo do Egito, n°000, CEP: 00000-000, Cidade: Ferraz de Vasconcelos-SP.
+    </Text>
+
+    <View style={{ width: '65%' }}>
+        <Text style={styles.adress}><Feather name="phone" size={20} color="black" /> Contato</Text> 
+      </View>
+      <Text style={styles.description}>
+     Tel:(88)8888-8888
+    </Text>
+    <Text style={styles.description}>
+     Fax:(88)8888-8888
+    </Text>
+    <Text style={styles.description}>
+     Whats:(88)8888-8888
+    </Text>
+
+    <View style={{ width: '85%' }}>
+        <Text style={styles.adress}><Feather name="list" size={20} color="black" /> Orçamento</Text> 
+      </View>
+      <View style={styles.slide}>
+          
+        <Image
+        source={require('../assets/LixeiraPapel.png')}
+        style={{width: 30, height: 40, borderRadius: 8}}
+        />
+      </View>
+
+    <View style={{ width: '65%' }}>
+        <Text style={styles.adress}><Feather name="check" size={20} color="black" /> Serviços prestados</Text> 
+      </View>
 
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{paddingHorizontal: 15, marginTop: 35 }}>
       <View style={styles.slide}>
         <Image
-        source={require('../assets/house5.jpg')}
+        source={require('../assets/LixeiraPapel.png')}
         style={{width: 90, height: 90, borderRadius: 8}}
         />
       </View>
 
       <View style={styles.slide}>
         <Image
-        source={require('../assets/house6.jpg')}
+        source={require('../assets/LixeiraVidro.jpg')}
         style={{width: 90, height: 90, borderRadius: 8}}
         />
       </View>
 
       <View style={styles.slide}>
         <Image
-        source={require('../assets/house2.jpg')}
+        source={require('../assets/LixoEletronico.jpg')}
         style={{width: 90, height: 90, borderRadius: 8}}
         />
       </View>
     </ScrollView>
 
-   </View>
+   </ScrollView>
   );
 }
 
@@ -102,10 +137,10 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 1,
   },
-  price:{
+  describ:{
     paddingHorizontal: 20,
     fontFamily: 'Montserrat_700Bold',
-    fontSize: 16,
+    fontSize: 10,
     color: '#000'
   },
   description:{
@@ -114,7 +149,14 @@ const styles = StyleSheet.create({
     color: '#b3aeae',
     fontSize: 14,
     lineHeight: 20,
-    marginTop: 20,
+    marginTop: 2,
+  },
+  adress:{
+    paddingHorizontal: 20,
+    fontFamily: 'Montserrat_700Bold',
+    fontSize: 14,
+    marginTop: 22,
+    color: '#000'
   },
   slide:{
     alignItems: 'center',

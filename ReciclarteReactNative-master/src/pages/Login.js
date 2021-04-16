@@ -4,18 +4,26 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import {Feather} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
+import Logo from '../components/Logo';
 import Botao from '../components/Botao';
 
 
 export default function Login() {
     const navigation = useNavigation();
-   
+
     return (
+     
       <ScrollView 
       showsVerticalScrollIndicator={false}
       style={{backgroundColor: '#FFF' }}
      >
-       
+
+        <View horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 80,}}>
+      <Logo
+       cover={require('../assets/Logo.png')} 
+      />
+       </View>
+        
        <View style={styles.header}>
          <View style={styles.inputArea}>
            <Feather name="user" size={24} color="black" />
@@ -36,16 +44,16 @@ export default function Login() {
          </View>
        </View>
    
-       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 65, paddingTop: 65,}}>
+       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15, paddingTop: 5,}}>
          <Botao 
-          name="Esqueceu a sua senha?"
+          name="Esqueceu a  senha?"
          />
    
        </ScrollView>
 
        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15,}}>
          <Botao 
-          name="ENTRAR"
+          name="ENTRAR" 
           onPress={() => navigation.navigate('home') }
          />
    
@@ -55,17 +63,14 @@ export default function Login() {
           name="CADASTRAR"
           onPress={() => navigation.navigate('home') }
          />
-   
-       </ScrollView>
-   
-      
+         </ScrollView>
       </ScrollView>
      );
    }
    
    const styles = StyleSheet.create({
      header:{
-      paddingHorizontal: 15,
+      paddingHorizontal: 5,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
